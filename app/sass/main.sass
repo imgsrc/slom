@@ -23,7 +23,7 @@ header
     .top-logo-text
       padding-top: 20px
   .top-phone
-    padding-top: 15px
+    padding-top: 10px
     &-job
       font-family: "Exo2Bold", sans-serif
       font-size: em(20px)
@@ -32,14 +32,22 @@ header
       font-family: "OpenSansSemiBold", sans-serif
       .fa
         font-size: 30px
-      a
-        color: $color
+    a
+      color: $color
+    .phone-callback
+      margin-left: 20px
+      text-decoration: none
+      border-bottom: 1px dashed lighten($color, 10%)
+      &:hover
+        border-bottom: 1px dashed $accent
+        color: $accent
+
+
   .fa
     width: 20px
     color: $accent
   .header-content
     min-height: 75vh
-    background: $color url("../img/bg.jpg") no-repeat center top
     background-size: cover
     color: $white
     .header-text
@@ -120,6 +128,10 @@ hr
 .s-testimonials
   .col-md-2
     margin-bottom: 10px
+
+.s-garbage
+  li
+    font-size: em(14px)
 
 .contact-form
   padding: 32px 26px

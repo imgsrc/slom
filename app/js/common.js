@@ -52,6 +52,7 @@ $(function () {
     });
 
     $(".s-features").parallax({imageSrc: './img/parallax.jpg'});
+    $(".header-content").parallax({imageSrc: './img/bg.jpg'});
 
     //Magnific Popup
     var callBack = $('a[href="#callback"]');

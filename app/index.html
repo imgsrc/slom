@@ -49,7 +49,11 @@
             <div class="top-phone-mob">
               <i class="fa fa-mobile"></i><a href="tel:+79276922230"> 8 (927) 69-222-30</a>
             </div><!-- ./top-phone-mob -->
-          
+  
+            <a href="#callback" class="phone-callback callback"
+               data-form="Заказ звонка"
+               data-text="Заказать звонок">Заказать звонок</a>
+            
           </div><!-- ./top-phone -->
         </div><!-- ./col-sm-4 -->
       
@@ -70,7 +74,7 @@
           
           <div class="header-form">
             <form>
-  
+              
               <!-- Hidden Required Fields -->
               <input type="hidden" name="admin-data">
               <input type="hidden" name="project_name" value="Слом">
@@ -126,25 +130,29 @@
     </div><!-- ./row -->
     
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-1">
+      <div class="col-sm-4">
         <a href="#s-office" class="s-about-item">
           <h3>Демонтаж</h3>
-          <img src="./img/icons/apartment.svg" alt="house" class="img-svg responsive-img">
+          <img src="./img/icons/apartment.svg" alt="apartment" class="img-svg responsive-img">
           <p>в квартире, офисе, магазине</p>
         </a><!-- ./s-about-item -->
       </div><!-- ./col-sm-4 -->
       
-      <div class="col-sm-1">
-      
-      </div>
-      
-      <div class="col-sm-4 col-sm-offset-2">
+      <div class="col-sm-4">
         <a href="#s-home" class="s-about-item">
           <h3>Демонтаж</h3>
           <img src="./img/icons/house.svg" alt="house" class="img-svg responsive-img">
           <p>частных домов, дач, гаражей</p>
         </a><!-- ./s-about-item -->
       </div><!-- ./col-sm-4 -->
+      
+      <div class="col-sm-4">
+        <a href="#s-garbage" class="s-about-item">
+          <h3>Вывоз</h3>
+          <img src="./img/icons/garbage.svg" alt="garbage" class="img-svg responsive-img">
+          <p>грунта и строительного мусора</p>
+        </a><!-- ./s-about-item -->
+      </div>
     
     </div><!-- ./row -->
   
@@ -269,6 +277,56 @@
   
   </div><!-- ./container -->
 </section><!-- ./s-home -->
+<hr>
+<section class="s-garbage" id="s-garbage">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Вывоз грунта и строительного мусора</h2>
+      </div>
+    </div><!-- ./row -->
+    
+    <div class="row">
+      
+      <div class="col-sm-4">
+        <div class="img-side">
+          <img src="./img/garbage.jpg" alt="Вывоз грунта и строительного мусора" class="responsive-img">
+        </div><!-- ./img-side -->
+      </div><!-- ./col-sm-5 -->
+      
+      <div class="col-sm-7 col-sm-offset-1">
+        <div class="text-side">
+          <p>При строительстве домов, зданий и различных сооружений возникает необходимость расчистить площадку или
+            вырыть котлован под будущее строение, а так же убрать накопившийся строительный мусор за время стройки. Наша
+            компания имеет большой опыт в данной сфере и легко справится с этой задачей!</p>
+          <strong>Если Вы обратитесь к нам, то сэкономите кучу времени и денег, в нашем арсенале для этого есть все
+            средства:</strong>
+          <ol>
+            <li>На первом этапе строительства необходимо подготовить участок под ваше будущее сооружение. Если на
+              участке есть мусор, не важно какого он происхождения, его нужно убрать! Для этого приезжает фронтальный
+              погрузчик, самосвалы (их размеры и грузоподъемность зависят от количества и вида вывозимого мусора) и
+              грузчики, если необходима дополнительная помощь.
+            </li>
+            <li>После того как мусор убрали, необходимо выровнять участок. Для этого необходим нивелир и большой опыт
+              водителя фронтального погрузчика! Наши специалисты без проблем справятся с этой задачей.
+            </li>
+            <li>Теперь мы можем копать котлован или траншею под фундамет. В нашем арсенале имеются экскаваторы разной
+              мощности и самосвалы разной грузоподъемности и объёма кузова. Если у вас небольшое сооружение, мы можем
+              выкопать фундамент вручную. Наша компания предоставляет услуги землекопов!
+            </li>
+            <li>В результате после возведения вашего дома, здания или сооружения, на участке скапливается куча мусора.
+              Мы поможем навести порядок на участке и подготовить для комфортного использования ваше строение!
+            </li>
+          </ol>
+          <a href="#callback" class="button callback"
+             data-form="Заказ вывоз мусора"
+             data-text="Заказать вывоз мусора">Заказать</a>
+        </div><!-- ./text-side -->
+      </div><!-- ./col-sm-7 -->
+    </div><!-- ./row -->
+  
+  </div><!-- ./container -->
+</section><!-- ./s-garbage -->
 
 <section class="s-gray s-testimonials">
   <div class="container">
@@ -313,10 +371,10 @@
     </div><!-- ./row -->
     
     <div class="row">
-  
+      
       <div class="col-sm-6">
         <form class="contact-form">
-  
+          
           <!-- Hidden Required Fields -->
           <input type="hidden" name="admin-data">
           <input type="hidden" name="project_name" value="Слом">
@@ -333,28 +391,31 @@
           <label>
             <input type="tel" name="Телефон" placeholder="Ваш телефон..." required>
           </label>
-  
+          
           <label>
             <textarea name="Сообщение" rows="10" placeholder="Ваше сообщение..."></textarea>
           </label>
           
           <button class="button">Отправить</button>
-          
+        
         </form>
       </div><!-- ./col-sm-6 -->
       
       <div class="col-sm-6">
         <div class="contacts-text">
           <p><i class="fa fa-phone-square"></i> <strong>Телефон: </strong>8 (846) 922-72-30</p>
-          <p><i class="fa fa-mobile"></i> <strong>Мобильный: </strong><a href="tel:+79277127230">8 (927) 712-72-30</a></p>
-          <p><i class="fa fa-envelope"></i> <strong>Email: </strong><a href="mailto:9227230@mail.ru">9227230@mail.ru</a></p>
-          <p><i class="fa fa-vk"></i> <strong>Мы ВКонтакте: </strong><a href="https://vk.com/vyvoz_musora_v_samare">vk.com</a></p>
+          <p><i class="fa fa-mobile"></i> <strong>Мобильный: </strong><a href="tel:+79277127230">8 (927) 712-72-30</a>
+          </p>
+          <p><i class="fa fa-envelope"></i> <strong>Email: </strong><a href="mailto:9227230@mail.ru">9227230@mail.ru</a>
+          </p>
+          <p><i class="fa fa-vk"></i> <strong>Мы ВКонтакте: </strong><a href="https://vk.com/vyvoz_musora_v_samare">vk.com</a>
+          </p>
           <a href="#callback" class="button callback"
              data-form="Заказ обратного звонка"
              data-text="Заказать звонок">Заказать звонок</a>
         </div>
       </div><!-- ./col-sm-6 -->
-      
+    
     </div><!-- ./row -->
   </div><!-- ./container -->
 </section><!-- ./s-contacts -->
@@ -380,7 +441,7 @@
           <p>воскресенье: с 09:00 до 18:00</p>
         </div>
       </div><!-- ./col-sm-5 -->
-      
+    
     </div><!-- ./row -->
   </div><!-- ./container -->
 </footer><!-- ./main-foot -->
