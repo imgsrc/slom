@@ -70,6 +70,14 @@
           
           <div class="header-form">
             <form>
+  
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="admin-data">
+              <input type="hidden" name="project_name" value="Слом">
+              <input type="hidden" name="admin_email" value="9227230@mail.ru">
+              <input type="hidden" name="form_subject" value="Новая заявка с сайта">
+              <!-- END Hidden Required Fields -->
+              
               <div class="form-head">
                 <div class="row">
                   <div class="col-sm-12">
@@ -83,13 +91,13 @@
                   
                   <div class="col-sm-4">
                     <label> Ваше имя
-                      <input type="text">
+                      <input type="text" name="Имя" required>
                     </label>
                   </div><!-- ./col-sm-4 -->
                   
                   <div class="col-sm-4">
                     <label> Ваш телефон
-                      <input type="tel">
+                      <input type="tel" name="Телефон" required>
                     </label>
                   </div><!-- ./col-sm-4 -->
                   
@@ -119,7 +127,7 @@
     
     <div class="row">
       <div class="col-sm-4 col-sm-offset-1">
-        <a href="#" class="s-about-item">
+        <a href="#s-office" class="s-about-item">
           <h3>Демонтаж</h3>
           <img src="./img/icons/apartment.svg" alt="house" class="img-svg responsive-img">
           <p>в квартире, офисе, магазине</p>
@@ -131,7 +139,7 @@
       </div>
       
       <div class="col-sm-4 col-sm-offset-2">
-        <a href="#" class="s-about-item">
+        <a href="#s-home" class="s-about-item">
           <h3>Демонтаж</h3>
           <img src="./img/icons/house.svg" alt="house" class="img-svg responsive-img">
           <p>частных домов, дач, гаражей</p>
@@ -186,7 +194,7 @@
   </div><!-- ./container -->
 </section>
 
-<section class="s-office">
+<section class="s-office" id="s-office">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -211,7 +219,9 @@
             возникают, больше всего проблем с соседями, шумом и пылью в подъезде. Специалисты нашей компании легко
             справятся с любой поставленной задачей демонтажа в квартире, дома или в офисе и сделают предварительный
             расчет предстоящего демонтажа, до выезда нашего сотрудника на объект.</p>
-          <a href="#" class="button">Заказать</a>
+          <a href="#callback" class="button callback"
+             data-form="Заказ демонтажа"
+             data-text="Заказать демонтаж">Заказать</a>
         </div><!-- ./text-side -->
       </div><!-- ./col-sm-7 -->
     
@@ -220,7 +230,7 @@
   </div><!-- ./container -->
 </section><!-- ./s-office -->
 <hr>
-<section class="s-home">
+<section class="s-home" id="s-home">
   <div class="container">
     
     <div class="row">
@@ -239,18 +249,175 @@
       
       <div class="col-sm-7 col-sm-offset-1">
         <div class="text-side">
-          <p>Наша компания более 7 лет занимается демонтажом в Самаре и Самарской области непосредственно демонтажем
+          <p>Наша компания более 7 лет занимается демонтажом в Самаре и Самарской области непосредственно демонтажом
             (сносом) домов, зданий, сооружений, гаражей и различных строений! Прежде чем вызывать специалиста на оценку
             объекта, необходимо отключить от дома или различных построек и сооружений все коммуникации, такие как:
             электричество, водоснабжение и газ. Частные дома ломают, как правило, новые хозяева участка, на котором
             стоит дом или старые дома, которые проще сломать, чем отремонтировать.</p>
-          <a href="#" class="button">Заказать</a>
+          <p><strong>Снос домов, зданий, гаражей начинается от 15000 рублей</strong>, зависит от площади строения,
+            состояния, материала, из которого построено строение, расположение объекта и т.д. В некоторых случаях
+            сломать дом, здание или сооружение при помощи спецтехники не представляется возможным, в нашей компании и на
+            этот случай предусмотрен план. <strong>Слом дома (гаража) может осуществляться как техникой, так и в
+              ручную!</strong> В нашем арсенале есть всё необходимое для проведения работ: профессиональные
+            демонтажники, оборудование, спецтехника и всё что только может понадобиться!</p>
+          <a href="#callback" class="button callback"
+             data-form="Заказ демонтажа"
+             data-text="Заказать демонтаж">Заказать</a>
         </div><!-- ./text-side -->
       </div><!-- ./col-sm-7 -->
     </div><!-- ./row -->
   
   </div><!-- ./container -->
 </section><!-- ./s-home -->
+
+<section class="s-gray s-testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Отзывы</h2>
+      </div><!-- ./col-sm-12 -->
+    </div><!-- ./row -->
+    
+    <div class="popup-gallery">
+      
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+      <div class="col-md-2">
+        <a href="./img/testimonial.jpg" title="Отзыв"><img src="./img/testimonial.jpg" width="180" height="300"></a>
+      </div>
+    
+    </div>
+  
+  </div><!-- ./container -->
+</section>
+
+<section class="s-contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Контакты</h2>
+      </div><!-- ./col-sm-12 text-center -->
+    </div><!-- ./row -->
+    
+    <div class="row">
+  
+      <div class="col-sm-6">
+        <form class="contact-form">
+  
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="admin-data">
+          <input type="hidden" name="project_name" value="Слом">
+          <input type="hidden" name="admin_email" value="9227230@mail.ru">
+          <input type="hidden" name="form_subject" value="Новая заявка с сайта">
+          <!-- END Hidden Required Fields -->
+          
+          <h3>Оставить заявку</h3>
+          
+          <label>
+            <input type="text" name="Имя" placeholder="Ваше имя...">
+          </label>
+          
+          <label>
+            <input type="tel" name="Телефон" placeholder="Ваш телефон..." required>
+          </label>
+  
+          <label>
+            <textarea name="Сообщение" rows="10" placeholder="Ваше сообщение..."></textarea>
+          </label>
+          
+          <button class="button">Отправить</button>
+          
+        </form>
+      </div><!-- ./col-sm-6 -->
+      
+      <div class="col-sm-6">
+        <div class="contacts-text">
+          <p><i class="fa fa-phone-square"></i> <strong>Телефон: </strong>8 (846) 922-72-30</p>
+          <p><i class="fa fa-mobile"></i> <strong>Мобильный: </strong><a href="tel:+79277127230">8 (927) 712-72-30</a></p>
+          <p><i class="fa fa-envelope"></i> <strong>Email: </strong><a href="mailto:9227230@mail.ru">9227230@mail.ru</a></p>
+          <p><i class="fa fa-vk"></i> <strong>Мы ВКонтакте: </strong><a href="https://vk.com/vyvoz_musora_v_samare">vk.com</a></p>
+          <a href="#callback" class="button callback"
+             data-form="Заказ обратного звонка"
+             data-text="Заказать звонок">Заказать звонок</a>
+        </div>
+      </div><!-- ./col-sm-6 -->
+      
+    </div><!-- ./row -->
+  </div><!-- ./container -->
+</section><!-- ./s-contacts -->
+
+<footer class="main-foot">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-sm-7">
+        <div class="requisites">
+          <p>ИП Стрижаков А.В.</p>
+          <p>ИНН 636705502045 ОГРНИП 312633031900053 ОКПО 0184401488</p>
+          <p>р/с 40802810154400003982 ПОВОЛЖСКИЙ БАНК ПАО СБЕРБАНК Г. САМАРА</p>
+          <p>к/с 30101810200000000607 БИК 043601607</p>
+        </div>
+      </div><!-- ./col-sm-7 -->
+      
+      <div class="col-sm-5">
+        <div class="timetable">
+          <h4>Режим работы</h4>
+          <p>понедельник — пятница: с 8:00 до 20:00</p>
+          <p>суббота: с 09:00 до 19:00</p>
+          <p>воскресенье: с 09:00 до 18:00</p>
+        </div>
+      </div><!-- ./col-sm-5 -->
+      
+    </div><!-- ./row -->
+  </div><!-- ./container -->
+</footer><!-- ./main-foot -->
+
+<div class="hidden">
+  <form id="callback" class="contact-form form-callback">
+    
+    <div class="success">
+      <p>Спасибо за заявку!</p>
+    </div>
+    
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="admin-data">
+    <input type="hidden" name="project_name" value="Слом">
+    <input type="hidden" name="admin_email" value="9227230@mail.ru">
+    <input type="hidden" name="form_subject" value="Новая заявка с сайта">
+    <!-- END Hidden Required Fields -->
+    
+    <div class="contact-form-head">
+      <h4>Оставить заявку</h4>
+    </div><!-- ./contact-form-head -->
+    
+    <label>
+      <input type="text" name="Имя" placeholder="Ваше имя...">
+    </label>
+    
+    <label>
+      <input type="tel" name="Телефон" placeholder="Ваш телефон..." required>
+    </label>
+    
+    <div class="text-center">
+      <button class="button button-small">Отправить</button>
+    </div><!-- ./text-center -->
+  
+  </form>
+</div>
+
 <script src="js/scripts.min.js"></script>
 
 </body>

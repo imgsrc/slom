@@ -125,3 +125,74 @@ b, strong
   background-color: #e8e8e8
   color: #666
 
+//Размытие при всплывающем окне
+*
+ transition: filter .25s ease
+.mfp-wrap ~ *
+  filter: blur(5px)
+
+//Fade-zoom animation for first dialog
+.my-mfp-zoom-in
+  .form-callback
+    opacity: 0
+    transform: scale(0.8)
+
+  &.mfp-ready .form-callback
+    opacity: 1
+    transform: scale(1)
+
+  &.mfp-removing .portfolio-popup,
+  &.mfp-removing .form-callback
+    transform: scale(0.8)
+    opacity: 0
+
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.success
+  color: #ffffff
+  background-color: $blue
+  position: absolute
+  z-index: 1
+  left: 0
+  top: -100%
+  width: 100%
+  height: 100%
+  display: flex
+  opacity: 0
+  @include mt(.5s)
+  p
+    margin: auto
+  &.active
+    top: 0
+    opacity: 1
+
+//Попап-форма обратной связи (кастомизация формы, которая внизу)
+.form-callback
+  position: relative
+  overflow: hidden
+  border-radius: 4px
+  background-color: rgba($white, .3)
+  +mt(.3s)
+  max-width: 320px
+  margin: auto
+  box-shadow: rgba(0, 0, 0, .3) 0 0 20px
+  input
+    margin-bottom: 20px
+  .mfp-close
+    color: #fff
+    opacity: .3
+    +mt(.25s)
+    &:hover
+      opacity: .6
+  .contact-form-head
+    h4
+      color: #fff
+      margin-bottom: 25px
