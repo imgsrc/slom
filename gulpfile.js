@@ -92,17 +92,17 @@ gulp.task('deploy', function () {
     var conn = ftp.create({
         host: '194.58.102.22',
         user: 'igor_verst',
-        password: 'userpassword',
+        password: '3ekSVQPA',
         parallel: 10,
         log: gutil.log
     });
 
     var globs = [
         'dist/**',
-        'dist/.htaccess',
+        'dist/.htaccess'
     ];
     return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/slovograf'));
+        .pipe(conn.dest('/slom'));
 
 });
 
